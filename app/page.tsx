@@ -1,5 +1,182 @@
-import { redirect } from "next/navigation";
+import Image from "next/image";
+import Nav from "@/components/Nav";
+import ServicesFooterCTA from "@/components/services/ServicesFooterCTA";
+
+const services = [
+  {
+    label: "Web Design",
+    body: "Stunning, strategic websites that build trust and convert visitors into clients.",
+    imageSrc: "/web-design.jpg",
+  },
+  {
+    label: "Funnel Design",
+    body: "Lead generation funnels and automations that handle the heavy lifting for you.",
+    imageSrc: "/funnel-design.jpg",
+  },
+  {
+    label: "Social Media",
+    body: "Brand-aligned content that positions you as the expert in your space.",
+    imageSrc: "/social-media.jpg",
+  },
+  {
+    label: "Brand Identity",
+    body: "Strategic, cohesive branding that reflects your vision and commands attention.",
+    imageSrc: "/brand-identity.jpg",
+  },
+  {
+    label: "Virtual Assistance",
+    body: "Reliable behind-the-scenes support that understands your systems and goals.",
+    imageSrc: "/virtual-assist.jpg",
+  },
+];
 
 export default function Home() {
-  redirect("/services");
+  return (
+    <div className="bg-cream min-h-screen">
+      <Nav />
+
+      {/* Hero */}
+      <section className="relative h-[90vh] min-h-[560px] flex items-center px-6">
+        <Image
+          src="/hero-bg.jpg"
+          alt="UpVirtual"
+          fill
+          className="object-cover"
+          priority
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-[rgba(26,26,26,0.55)]" />
+        <div className="relative z-10 max-w-350 mx-auto w-full">
+          <p className="font-jost text-[11px] uppercase tracking-[0.30em] text-[rgba(250,249,247,0.60)] mb-5">
+            UpVirtual — Digital Agency
+          </p>
+          <h1 className="font-cormorant text-[52px] md:text-[76px] font-light text-cream leading-[1.05] max-w-3xl mb-8">
+            Elevate Your Brand. Scale Your Business.
+          </h1>
+          <div className="flex flex-wrap gap-4">
+            <a
+              href="/services"
+              className="font-jost font-normal text-[12px] uppercase tracking-[0.14em] text-cream border border-white/40 px-8 py-4 hover:bg-cream hover:text-ink transition-all inline-block"
+            >
+              View Services
+            </a>
+            <a
+              href="https://cal.com/clint-cena"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-jost font-normal text-[12px] uppercase tracking-[0.14em] text-ink bg-cream px-8 py-4 hover:bg-transparent hover:text-cream border border-cream transition-all inline-block"
+            >
+              Book a Free Call
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Services overview */}
+      <section className="py-20 px-6">
+        <div className="max-w-350 mx-auto">
+          <div className="mb-14">
+            <p className="font-jost text-[10px] uppercase tracking-[0.25em] text-[rgba(26,26,26,0.40)] mb-3">
+              What We Do
+            </p>
+            <h2 className="font-cormorant text-[40px] md:text-[52px] font-light text-ink leading-tight max-w-xl">
+              Services Built Around Your Growth
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[rgba(0,0,0,0.08)]">
+            {services.map((s) => (
+              <a
+                key={s.label}
+                href="/services"
+                className="group relative bg-cream overflow-hidden block"
+              >
+                <div className="relative h-56 overflow-hidden">
+                  <Image
+                    src={s.imageSrc}
+                    alt={s.label}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-[rgba(26,26,26,0.20)] group-hover:bg-[rgba(26,26,26,0.35)] transition-all duration-300" />
+                </div>
+                <div className="p-6 border-t border-[rgba(0,0,0,0.08)]">
+                  <p className="font-jost text-[10px] uppercase tracking-[0.20em] text-[rgba(26,26,26,0.40)] mb-2">
+                    {s.label}
+                  </p>
+                  <p className="font-jost font-light text-[13.5px] leading-relaxed text-[rgba(26,26,26,0.65)]">
+                    {s.body}
+                  </p>
+                  <p className="font-jost text-[11px] uppercase tracking-[0.12em] text-ink mt-4 group-hover:opacity-60 transition-opacity">
+                    Learn More →
+                  </p>
+                </div>
+              </a>
+            ))}
+
+            {/* Cloud services tile */}
+            <a
+              href="/cloud-services"
+              className="group relative bg-ink overflow-hidden block"
+            >
+              <div className="relative h-56 overflow-hidden">
+                <Image
+                  src="/service2v3.png"
+                  alt="Cloud Services"
+                  fill
+                  className="object-cover opacity-40 transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+              </div>
+              <div className="p-6 border-t border-white/10">
+                <p className="font-jost text-[10px] uppercase tracking-[0.20em] text-[rgba(250,249,247,0.45)] mb-2">
+                  Cloud Services
+                </p>
+                <p className="font-jost font-light text-[13.5px] leading-relaxed text-[rgba(250,249,247,0.70)]">
+                  Managed cloud storage, VPS hosting, and infrastructure — fully handled by us.
+                </p>
+                <p className="font-jost text-[11px] uppercase tracking-[0.12em] text-cream mt-4 group-hover:opacity-60 transition-opacity">
+                  Explore →
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Process strip */}
+      <section className="bg-ink py-20 px-6">
+        <div className="max-w-350 mx-auto">
+          <div className="mb-14 text-center">
+            <p className="font-jost text-[10px] uppercase tracking-[0.25em] text-[rgba(250,249,247,0.40)] mb-3">
+              How It Works
+            </p>
+            <h2 className="font-cormorant text-[40px] md:text-[52px] font-light text-cream leading-tight">
+              Simple. Strategic. Done.
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-3 gap-12 max-w-4xl mx-auto">
+            {[
+              { step: "01", title: "Discovery Call", body: "We learn about your business, goals, and what's holding you back." },
+              { step: "02", title: "Strategy & Design", body: "We build a tailored plan and create assets that match your brand." },
+              { step: "03", title: "Launch & Support", body: "We deliver, launch, and stay available as your business grows." },
+            ].map((item) => (
+              <div key={item.step} className="text-center">
+                <p className="font-cormorant text-[56px] font-light text-[rgba(250,249,247,0.08)] leading-none mb-2">
+                  {item.step}
+                </p>
+                <h3 className="font-cormorant text-[22px] text-cream mb-3">{item.title}</h3>
+                <p className="font-jost font-light text-[13px] leading-relaxed text-[rgba(250,249,247,0.50)]">
+                  {item.body}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <ServicesFooterCTA />
+    </div>
+  );
 }
