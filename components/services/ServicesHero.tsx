@@ -5,7 +5,7 @@ export default function ServicesHero() {
     <section className="relative overflow-hidden min-h-140 md:min-h-160 flex items-center justify-center border-b border-[rgba(0,0,0,0.06)]">
       {/* Background image */}
       <Image
-        src="/hero-bg.jpg"
+        src="/services-hero.jpg"
         alt="Hero background"
         fill
         className="object-cover"
