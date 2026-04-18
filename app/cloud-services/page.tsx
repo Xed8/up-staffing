@@ -1,6 +1,18 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Nav from "@/components/Nav";
 import ServicesFooterCTA from "@/components/services/ServicesFooterCTA";
+
+export const metadata: Metadata = {
+  title: "Cloud Services — UpVirtual",
+  description: "Managed cloud storage, VPS hosting, and infrastructure — fully handled by UpVirtual so your team can focus on work.",
+  openGraph: {
+    title: "Cloud Services — UpVirtual",
+    description: "Managed cloud storage, VPS hosting, and infrastructure — fully handled by UpVirtual so your team can focus on work.",
+    url: "https://www.upvirtual.net/cloud-services",
+    images: [{ url: "/service2v3.png", width: 1200, height: 630, alt: "UpVirtual Cloud Services" }],
+  },
+};
 
 interface CloudService {
   number: string;

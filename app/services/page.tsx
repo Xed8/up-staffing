@@ -1,7 +1,19 @@
+import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import ServicesHero from "@/components/services/ServicesHero";
 import ServiceCard from "@/components/services/ServiceCard";
 import ServicesFooterCTA from "@/components/services/ServicesFooterCTA";
+
+export const metadata: Metadata = {
+  title: "Services — UpVirtual",
+  description: "Web design, funnel design, social media, brand identity, and virtual assistance for growing businesses.",
+  openGraph: {
+    title: "Services — UpVirtual",
+    description: "Web design, funnel design, social media, brand identity, and virtual assistance for growing businesses.",
+    url: "https://www.upvirtual.net/services",
+    images: [{ url: "/services-hero.jpg", width: 1200, height: 630, alt: "UpVirtual Services" }],
+  },
+};
 
 interface ServiceEntry {
   number: string;
