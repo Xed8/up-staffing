@@ -18,6 +18,9 @@ export default function Nav() {
           <a href="/cloud-services" className="font-jost text-[13px] tracking-widest uppercase text-[rgba(26,26,26,0.55)] hover:text-ink transition-colors">
             Cloud Services
           </a>
+          <a href="/about" className="font-jost text-[13px] tracking-widest uppercase text-[rgba(26,26,26,0.55)] hover:text-ink transition-colors">
+            About
+          </a>
         </div>
         <a
           href="https://cal.com/clint-cena"

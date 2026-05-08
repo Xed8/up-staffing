@@ -176,6 +176,51 @@ export default function Home() {
         </div>
       </section>
 
+      {/* About section */}
+      <section className="bg-panel border-t border-[#D4D0C8] py-20 md:py-[120px] px-6">
+        <div className="max-w-350 mx-auto">
+          <div className="max-w-2xl mb-10">
+            <p className="font-jost text-[14px] font-semibold uppercase tracking-[0.15em] text-[#6B6B6B] mb-5">
+              Who We Are
+            </p>
+            <h2 className="font-cormorant text-[40px] md:text-[56px] font-light text-[#1A1A1A] leading-tight mb-8">
+              We&apos;re Not Another Agency. We&apos;re Your Growth Team.
+            </h2>
+            <p className="font-jost font-light text-[16px] md:text-[18px] leading-[1.7] text-[#2D2D2D] mb-6">
+              UpVirtual was built for businesses that are done paying for pretty websites that don&apos;t convert. We&apos;re a lean, global digital agency that combines design, automation, and strategy — so every dollar you spend actually moves the needle.
+            </p>
+            <p className="font-jost font-light text-[16px] md:text-[18px] leading-[1.7] text-[#2D2D2D]">
+              We work with coaches, consultants, and service businesses worldwide. No fluff. No 90-day &ldquo;strategies&rdquo; that go nowhere. Just sharp execution, real systems, and a team that treats your business like our own.
+            </p>
+          </div>
+
+          {/* Stats row */}
+          <div className="grid grid-cols-3 divide-x divide-[#D4D0C8] border border-[#D4D0C8] bg-white shadow-[0_1px_3px_rgba(0,0,0,0.08)] mb-12">
+            {[
+              { number: "Global", label: "Clients Worldwide" },
+              { number: "24hr", label: "Average Response Time" },
+              { number: "100%", label: "Custom — No Templates" },
+            ].map((stat) => (
+              <div key={stat.label} className="text-center py-10 px-4">
+                <p className="font-cormorant text-[40px] md:text-[56px] font-light text-[#1A1A1A] leading-none mb-2">
+                  {stat.number}
+                </p>
+                <p className="font-jost text-[11px] md:text-[13px] uppercase tracking-[0.12em] text-[#5A5A5A]">
+                  {stat.label}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <a
+            href="/about"
+            className="font-jost font-semibold text-[13px] uppercase tracking-[0.12em] text-[#F5F5F0] bg-[#1A1A1A] px-8 py-4 rounded-lg hover:bg-[#2D2D2D] transition-colors inline-block"
+          >
+            Meet the Team →
+          </a>
+        </div>
+      </section>
+
       <ServicesFooterCTA />
     </div>
   );
