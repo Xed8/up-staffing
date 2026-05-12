@@ -25,21 +25,18 @@ const differentiators = [
 
 const teamMembers = [
   {
-    initials: "CC",
     name: "Clint Cena",
     role: "Founder & Operations Manager",
     bio: "Clint founded UpVirtual to build the kind of agency he wished existed when he was on the client side — running operations, sales, and business development for fast-moving teams. He brings hands-on experience across customer success, project management, and the automation systems (CRM pipelines, GoHighLevel, email sequences, SEO) that turn marketing spend into booked calls. Based in Metro Cebu, he keeps the team lean, the communication direct, and the deliverables measurable.",
     linkedin: "https://www.linkedin.com/in/clint-cena/",
   },
   {
-    initials: "AN",
     name: "Arnold Gerome Naval",
     role: "CTO",
     bio: "Arnold leads engineering at UpVirtual with 8+ years as a fullstack and AI engineer — including Angular and React consulting work and ongoing software development at raisin Software. He ships his own products on the side (OnePasteChat.com, experimental game prototypes) to keep the toolbox sharp and the build muscle warm. Based in Boyle, Alberta, Canada, he makes sure what we ship is fast, scalable, and actually works in production from day one.",
     linkedin: "https://www.linkedin.com/in/arnold-gerome-naval-85332311a/",
   },
   {
-    initials: "CT",
     name: "Cedric Tomanda",
     role: "Lead Engineer",
     bio: "Cedric is UpVirtual's lead engineer, shipping custom web builds for agencies and BPO clients across multiple industries — including Digital Solutions work at Caliber Business Resource BPO and contract builds for Executives Events and JCI Boholana Kisses. His toolkit covers what most agencies skip: clean code, SEO foundations, and CRM administration that ties the site back to revenue. Based in Tacloban, Philippines, with a BS in Information Technology from Leyte Normal University, he turns specs into production code on tight cycles.",
@@ -171,18 +168,13 @@ export default function AboutPage() {
             {teamMembers.map((member, i) => (
               <div
                 key={i}
-                className="bg-white rounded-xl p-10 shadow-[0_2px_8px_rgba(0,0,0,0.06)] [border-top:3px_solid_#B8A88A] flex flex-col items-center text-center"
+                className="bg-white rounded-xl p-10 shadow-[0_2px_8px_rgba(0,0,0,0.06)] [border-top:3px_solid_#B8A88A] flex flex-col"
               >
-                <div className="w-[120px] h-[120px] rounded-full bg-[#D4D0C8] flex items-center justify-center mb-6">
-                  <span className="font-jost text-[24px] font-semibold text-[#6B6B6B]">
-                    {member.initials}
-                  </span>
-                </div>
                 <a
                   href={member.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-jost text-[22px] font-semibold text-[#1A1A1A] mb-1 hover:text-[#B8A88A] transition-colors inline-flex items-center gap-2"
+                  className="font-jost text-[22px] font-semibold text-[#1A1A1A] mb-1 hover:text-[#B8A88A] transition-colors inline-flex items-center gap-2 self-start"
                 >
                   {member.name}
                   <svg
@@ -199,7 +191,7 @@ export default function AboutPage() {
                 <p className="font-jost text-[14px] uppercase tracking-[0.10em] text-[#6B6B6B] mb-5">
                   {member.role}
                 </p>
-                <p className="font-jost font-light text-[16px] leading-[1.6] text-[#3D3D3D] text-left">
+                <p className="font-jost font-light text-[16px] leading-[1.6] text-[#3D3D3D]">
                   {member.bio}
                 </p>
               </div>
