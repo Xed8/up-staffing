@@ -25,22 +25,25 @@ const differentiators = [
 
 const teamMembers = [
   {
-    initials: "CF",
-    name: "[Co-Founder Name]",
-    role: "Co-Founder & [Title]",
-    bio: "[2–3 sentence bio about their background, what they bring to UpVirtual, and what drives them. Keep it human — mention a skill, a belief, or a quirk.]",
+    initials: "CC",
+    name: "Clint Cena",
+    role: "Founder & Operations Manager",
+    bio: "Clint founded UpVirtual to build the kind of agency he wished existed when he was on the client side — running operations, sales, and business development for fast-moving teams. He brings hands-on experience across customer success, project management, and the automation systems (CRM pipelines, GoHighLevel, email sequences, SEO) that turn marketing spend into booked calls. Based in Metro Cebu, he keeps the team lean, the communication direct, and the deliverables measurable.",
+    linkedin: "https://www.linkedin.com/in/clint-cena/",
   },
   {
-    initials: "CF",
-    name: "[Co-Founder Name]",
-    role: "Co-Founder & [Title]",
-    bio: "[2–3 sentence bio about their background, what they bring to UpVirtual, and what drives them.]",
+    initials: "AN",
+    name: "Arnold Gerome Naval",
+    role: "CTO",
+    bio: "Arnold leads engineering at UpVirtual with 8+ years as a fullstack and AI engineer — including Angular and React consulting work and ongoing software development at raisin Software. He ships his own products on the side (OnePasteChat.com, experimental game prototypes) to keep the toolbox sharp and the build muscle warm. Based in Boyle, Alberta, Canada, he makes sure what we ship is fast, scalable, and actually works in production from day one.",
+    linkedin: "https://www.linkedin.com/in/arnold-gerome-naval-85332311a/",
   },
   {
-    initials: "TM",
-    name: "[Team Member Name]",
-    role: "[Role Title]",
-    bio: "[2–3 sentence bio.]",
+    initials: "CT",
+    name: "Cedric Tomanda",
+    role: "Lead Engineer",
+    bio: "Cedric is UpVirtual's lead engineer, shipping custom web builds for agencies and BPO clients across multiple industries — including Digital Solutions work at Caliber Business Resource BPO and contract builds for Executives Events and JCI Boholana Kisses. His toolkit covers what most agencies skip: clean code, SEO foundations, and CRM administration that ties the site back to revenue. Based in Tacloban, Philippines, with a BS in Information Technology from Leyte Normal University, he turns specs into production code on tight cycles.",
+    linkedin: "https://www.linkedin.com/in/cedric-tomanda-8335902a7/",
   },
 ];
 
@@ -175,7 +178,24 @@ export default function AboutPage() {
                     {member.initials}
                   </span>
                 </div>
-                <p className="font-jost text-[22px] font-semibold text-[#1A1A1A] mb-1">{member.name}</p>
+                <a
+                  href={member.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-jost text-[22px] font-semibold text-[#1A1A1A] mb-1 hover:text-[#B8A88A] transition-colors inline-flex items-center gap-2"
+                >
+                  {member.name}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="w-[18px] h-[18px]"
+                    aria-hidden="true"
+                  >
+                    <path d="M20.45 20.45h-3.55v-5.56c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .78 0 1.73v20.54C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .78 23.2 0 22.22 0z" />
+                  </svg>
+                  <span className="sr-only">LinkedIn profile</span>
+                </a>
                 <p className="font-jost text-[14px] uppercase tracking-[0.10em] text-[#6B6B6B] mb-5">
                   {member.role}
                 </p>
