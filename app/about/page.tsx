@@ -33,7 +33,7 @@ const teamMembers = [
   {
     name: "Arnold Gerome Naval",
     role: "CTO",
-    bio: "Arnold leads engineering at UpVirtual with 8+ years as a fullstack and AI engineer — including Angular and React consulting work and ongoing software development at raisin Software. He ships his own products on the side (OnePasteChat.com, experimental game prototypes) to keep the toolbox sharp and the build muscle warm. Based in Boyle, Alberta, Canada, he makes sure what we ship is fast, scalable, and actually works in production from day one.",
+    bio: "Arnold sets the technical direction at UpVirtual with 8+ years as a fullstack and AI engineer — including Angular and React consulting work and ongoing software development at raisin Software. He shapes the architecture, tooling, and AI workflows the team builds on, and ships his own products on the side (OnePasteChat.com, experimental game prototypes) to keep the toolbox sharp. Based in Boyle, Alberta, Canada, he makes sure what we deliver is fast, scalable, and built to hold up in production.",
     linkedin: "https://www.linkedin.com/in/arnold-gerome-naval-85332311a/",
   },
   {
